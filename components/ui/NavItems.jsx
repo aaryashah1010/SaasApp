@@ -9,7 +9,6 @@ const navItems = [
   { label: 'Home', href: '/' },
   { label: 'Companion', href: '/companion' },
   { label: 'My Journey', href: '/my-journey' },
-  { label: 'Sign In', href: '/sign-in' }
 ]
 
 const NavItems = () => {
