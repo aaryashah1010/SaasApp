@@ -31,7 +31,7 @@ const CompanionsLibrary = async ({ searchParams }: SearchParams) => {
             topic={companion.topic}
             subject={companion.subject}
             duration={companion.duration}
-            colour={getSubjectColor(companion.subject)}
+            color={getSubjectColor(companion.subject)}
           />
         ))}
       </section>

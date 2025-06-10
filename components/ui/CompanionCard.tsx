@@ -3,18 +3,18 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button'
 
-
 interface CompanionCardProps {
   id: string;
-    name: string;
-    topic: string;
-    subject: string;
-    duration: number;
-    colour: string;
+  name: string;
+  topic: string;
+  subject: string;
+  duration: number;
+  color: string; // Changed from 'colour' to 'color'
 }
-const CompanionCard = ({id,name,topic,subject,duration,colour}:CompanionCardProps) => {
+
+const CompanionCard = ({id, name, topic, subject, duration, color}: CompanionCardProps) => {
   return (
-   <article className='companion-card' style={{backgroundColor: colour}}>
+   <article className='companion-card' style={{backgroundColor: color}}>
       <div className='flex justify-between items-center'>
         <div className='subject-badge'>
            {subject}
@@ -35,7 +35,7 @@ const CompanionCard = ({id,name,topic,subject,duration,colour}:CompanionCardProp
             width={16}
             height={16}
           />
-          <p className='texsm'>{duration} minutes</p>
+          <p className='text-sm'>{duration} minutes</p> {/* Also fixed typo: 'texsm' to 'text-sm' */}
       </div>
       <Link href={`/companion/${id}`} className="w-full">
           <Button className='btn-primary w-full justify-center'>
